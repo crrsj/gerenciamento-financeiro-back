@@ -29,6 +29,8 @@ src/main/java/br/com/despesas
 ├── service      # Regras de negócio
 └── relatorio    # Serviços de relatórios em Pdf
 
+![despesas](https://github.com/user-attachments/assets/785e4567-b5dc-4f02-8f77-8a6d74b49f92)
+
 👨‍💻 Autor
 
 Carlos Roberto Ribeiro Santos Junior
