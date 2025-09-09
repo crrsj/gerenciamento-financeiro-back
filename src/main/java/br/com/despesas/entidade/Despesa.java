@@ -1,6 +1,7 @@
 package br.com.despesas.entidade;
 
 import br.com.despesas.enums.FormaPagamento;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,6 +18,7 @@ public class Despesa {
     private Long id;
     private String descricao;
     private BigDecimal valorTotal;
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy")
     private LocalDate data;
     @Enumerated(EnumType.STRING)
     private FormaPagamento formaPagamento;

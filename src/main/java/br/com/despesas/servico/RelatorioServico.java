@@ -13,13 +13,9 @@ import com.lowagie.text.*;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.awt.Color;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.util.List;
 import java.util.stream.Stream;
 
 @Service

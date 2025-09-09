@@ -107,6 +107,19 @@ public class DespesaServico {
                     ));
         }
 
+    public Page<DespesaDto> buscarPorCategoria(String categoria, Pageable pageable) {
+        return despesaRepositorio.findByCategoriaNomeContainingIgnoreCase(categoria, pageable)
+                .map(despesa -> new DespesaDto(
+                        despesa.getId(),
+                        despesa.getDescricao(),
+                        despesa.getValorTotal(),
+                        despesa.getData(),
+                        despesa.getFormaPagamento().name(),
+                        despesa.getParcelas(),
+                        despesa.getCategoria().getNome()
+                ));
+    }
+
 
 
 }
