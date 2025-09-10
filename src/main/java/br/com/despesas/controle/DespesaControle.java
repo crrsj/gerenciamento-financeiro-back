@@ -97,6 +97,6 @@ public class DespesaControle {
             @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size, Sort.by("data").descending());
         Page<DespesaDto> despesas = despesaServico.buscarPorCategoria(categoria, pageable);
-        return ResponseEntity.ok(despesas);
+        return ResponseEntity.status(HttpStatus.OK).body(despesas);
     }
 }
